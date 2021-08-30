@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9321B33926DD615B000E15F7 /* gradient-sq.png in Resources */ = {isa = PBXBuildFile; fileRef = 9321B33826DD615A000E15F7 /* gradient-sq.png */; };
 		93FB52BD26DD38AB007B407A /* LAKEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB52BC26DD38AB007B407A /* LAKEApp.swift */; };
 		93FB52BF26DD38AB007B407A /* LakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB52BE26DD38AB007B407A /* LakeView.swift */; };
 		93FB52C126DD38AB007B407A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FB52C026DD38AB007B407A /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9321B33826DD615A000E15F7 /* gradient-sq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient-sq.png"; sourceTree = "<group>"; };
 		93FB52B926DD38AB007B407A /* LAKE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAKE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FB52BC26DD38AB007B407A /* LAKEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAKEApp.swift; sourceTree = "<group>"; };
 		93FB52BE26DD38AB007B407A /* LakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				93FB52BE26DD38AB007B407A /* LakeView.swift */,
 				93FB52CB26DD47BF007B407A /* LakeMichiganWaves.m4a */,
 				93FB52CD26DD48CF007B407A /* gradient.jpg */,
+				9321B33826DD615A000E15F7 /* gradient-sq.png */,
 				93FB52C026DD38AB007B407A /* Assets.xcassets */,
 				93FB52D126DD560D007B407A /* Assets.xcassets */,
 				93FB52C526DD38AB007B407A /* Info.plist */,
@@ -143,6 +146,7 @@
 				93FB52CC26DD47C0007B407A /* LakeMichiganWaves.m4a in Resources */,
 				93FB52CE26DD48CF007B407A /* gradient.jpg in Resources */,
 				93FB52D226DD560D007B407A /* Assets.xcassets in Resources */,
+				9321B33926DD615B000E15F7 /* gradient-sq.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +292,7 @@
 				DEVELOPMENT_TEAM = 4QNZ8566GP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LAKE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +314,7 @@
 				DEVELOPMENT_TEAM = 4QNZ8566GP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = LAKE/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -52,6 +52,9 @@ struct LakeView: View {
             Image("gradient").resizable()
         )
         .edgesIgnoringSafeArea(.all)
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification), perform: { _ in
+            wavePlayer.resyncState()
+        })
     }
 }
 
