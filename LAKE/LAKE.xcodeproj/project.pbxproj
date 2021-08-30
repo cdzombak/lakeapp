@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9321B33926DD615B000E15F7 /* gradient-sq.png in Resources */ = {isa = PBXBuildFile; fileRef = 9321B33826DD615A000E15F7 /* gradient-sq.png */; };
+		9314D67226DD6B5F00F3DB4B /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9314D67126DD6B5F00F3DB4B /* sunset.jpg */; };
 		93FB52BD26DD38AB007B407A /* LAKEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB52BC26DD38AB007B407A /* LAKEApp.swift */; };
 		93FB52BF26DD38AB007B407A /* LakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FB52BE26DD38AB007B407A /* LakeView.swift */; };
 		93FB52C126DD38AB007B407A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FB52C026DD38AB007B407A /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9321B33826DD615A000E15F7 /* gradient-sq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gradient-sq.png"; sourceTree = "<group>"; };
+		9314D67126DD6B5F00F3DB4B /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
 		93FB52B926DD38AB007B407A /* LAKE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LAKE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FB52BC26DD38AB007B407A /* LAKEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAKEApp.swift; sourceTree = "<group>"; };
 		93FB52BE26DD38AB007B407A /* LakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LakeView.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				93FB52BE26DD38AB007B407A /* LakeView.swift */,
 				93FB52CB26DD47BF007B407A /* LakeMichiganWaves.m4a */,
 				93FB52CD26DD48CF007B407A /* gradient.jpg */,
-				9321B33826DD615A000E15F7 /* gradient-sq.png */,
+				9314D67126DD6B5F00F3DB4B /* sunset.jpg */,
 				93FB52C026DD38AB007B407A /* Assets.xcassets */,
 				93FB52D126DD560D007B407A /* Assets.xcassets */,
 				93FB52C526DD38AB007B407A /* Info.plist */,
@@ -144,9 +144,9 @@
 				93FB52C426DD38AB007B407A /* Preview Assets.xcassets in Resources */,
 				93FB52C126DD38AB007B407A /* Assets.xcassets in Resources */,
 				93FB52CC26DD47C0007B407A /* LakeMichiganWaves.m4a in Resources */,
+				9314D67226DD6B5F00F3DB4B /* sunset.jpg in Resources */,
 				93FB52CE26DD48CF007B407A /* gradient.jpg in Resources */,
 				93FB52D226DD560D007B407A /* Assets.xcassets in Resources */,
-				9321B33926DD615B000E15F7 /* gradient-sq.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

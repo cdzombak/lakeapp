@@ -88,7 +88,7 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
     
         var nowPlayingInfo = [String : Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = "LAKE"
-        if let image = UIImage(named: "gradient-sq") {
+        if let image = UIImage(named: "sunset") {
             nowPlayingInfo[MPMediaItemPropertyArtwork] =
                 MPMediaItemArtwork(boundsSize: image.size) { size in
                     return image
