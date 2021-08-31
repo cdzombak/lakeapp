@@ -19,9 +19,10 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         let sound = Bundle.main.path(forResource: "LakeMichiganWaves", ofType: "m4a")
         self.player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         self.player.numberOfLoops = -1
-//        self.player.prepareToPlay()
         
         super.init()
+        
+        self.player.delegate = self
 
         // https://developer.apple.com/documentation/avfaudio/avaudiosession/responding_to_audio_session_interruptions
         let nc = NotificationCenter.default
@@ -29,6 +30,11 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
                        selector: #selector(handleInterruption),
                        name: AVAudioSession.interruptionNotification,
                        object: AVAudioSession.sharedInstance)
+        // https://developer.apple.com/documentation/avfaudio/avaudiosession/responding_to_audio_session_route_changes
+        nc.addObserver(self,
+                       selector: #selector(handleRouteChange),
+                       name: AVAudioSession.routeChangeNotification,
+                       object: nil)
         
         // https://stackoverflow.com/questions/34688128/how-do-i-get-audio-controls-on-lock-screen-control-center-from-avaudioplayer-in
         UIApplication.shared.beginReceivingRemoteControlEvents()
@@ -68,6 +74,33 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
         default: ()
         }
     }
+    
+    @objc func handleRouteChange(notification: Notification) {
+        guard let userInfo = notification.userInfo,
+            let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+            let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
+                return
+        }
+        
+        switch reason {
+//        case .newDeviceAvailable:
+//            let session = AVAudioSession.sharedInstance()
+//            headphonesConnected = hasHeadphones(in: session.currentRoute)
+        case .oldDeviceUnavailable:
+            // for my use case, I just care that audio pauses when a speaker disconnects:
+            pause()
+//            if let previousRoute =
+//                userInfo[AVAudioSessionRouteChangePreviousRouteKey] as? AVAudioSessionRouteDescription {
+//                headphonesConnected = hasHeadphones(in: previousRoute)
+//            }
+        default: ()
+        }
+    }
+
+//    func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
+//        // Filter the outputs to only those with a port type of headphones.
+//        return !routeDescription.outputs.filter({$0.portType == .headphones}).isEmpty
+//    }
     
     @objc func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isPlaying = false
