@@ -1,11 +1,26 @@
 <html>
 <head>
   <title>LAKE</title>
+  <style type="text/css">
+    body {
+      background-image: url('gradient.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #player {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 </head>
-<body background="gradient.jpg">
-<audio controls loop>
-  <source src="LakeMichiganWaves.m4a" type="audio/mp4">
-  Your browser does not support the audio element.
-</audio>
+<body>
+  <div id="player">
+    <!-- TODO(cdzombak): This looping approach has a gap. See: https://www.kevssite.com/seamless-audio-looping/ -->
+    <audio controls loop>
+      <source src="LakeMichiganWaves.m4a" type="audio/mp4" />
+    </audio>
+  </div>
 </body>
 </html>
