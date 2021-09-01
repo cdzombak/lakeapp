@@ -61,7 +61,6 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
                 let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
                     return
             }
-
         switch type {
         case .began:
             pause()
@@ -81,26 +80,13 @@ class WavePlayer: NSObject, ObservableObject, AVAudioPlayerDelegate {
             let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
                 return
         }
-        
         switch reason {
-//        case .newDeviceAvailable:
-//            let session = AVAudioSession.sharedInstance()
-//            headphonesConnected = hasHeadphones(in: session.currentRoute)
         case .oldDeviceUnavailable:
             // for my use case, I just care that audio pauses when a speaker disconnects:
             pause()
-//            if let previousRoute =
-//                userInfo[AVAudioSessionRouteChangePreviousRouteKey] as? AVAudioSessionRouteDescription {
-//                headphonesConnected = hasHeadphones(in: previousRoute)
-//            }
         default: ()
         }
     }
-
-//    func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool {
-//        // Filter the outputs to only those with a port type of headphones.
-//        return !routeDescription.outputs.filter({$0.portType == .headphones}).isEmpty
-//    }
     
     @objc func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         isPlaying = false

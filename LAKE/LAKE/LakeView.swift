@@ -8,6 +8,7 @@
 import AVKit
 import SwiftUI
 
+// https://stackoverflow.com/questions/56610957/is-there-a-method-to-blur-a-background-in-swiftui
 struct VisualEffectView: UIViewRepresentable {
     var effect: UIVisualEffect?
     func makeUIView(context: UIViewRepresentableContext<Self>) -> UIVisualEffectView { UIVisualEffectView() }
