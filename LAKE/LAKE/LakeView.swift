@@ -30,18 +30,10 @@ struct LakeView: View {
                 Button(action:{
                     wavePlayer.toggle()
                 }, label: {
-                    // TODO(cdzombak): how to dedupe this button style code?
-                    if wavePlayer.isPlaying {
-                        Image(systemName: "pause.circle")
-                            .font(Font.system(.largeTitle))
-                            .padding(45)
-                            .foregroundColor(Color(UIColor.darkGray))
-                    } else {
-                        Image(systemName: "play.circle")
-                            .font(Font.system(.largeTitle))
-                            .padding(45)
-                            .foregroundColor(Color(UIColor.darkGray))
-                    }
+                    Image(systemName: wavePlayer.isPlaying ? "pause.circle" : "play.circle")
+                        .font(Font.system(.largeTitle))
+                        .padding(45)
+                        .foregroundColor(Color(UIColor.darkGray))
                 })
                 .background(VisualEffectView(effect: UIBlurEffect(style: .light)))
                 .cornerRadius(40)
